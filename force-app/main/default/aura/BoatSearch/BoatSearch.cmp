@@ -1,10 +1,13 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    
+    <aura:handler name="formsubmit" event="c:FormSubmit" action="{!c.onFormSubmit}"/>
+
     <lightning:card title="Find a Boat">
             <c:BoatSearchForm/>
     </lightning:card>
     <!--TODO: Add a margin-bottom of 10px to the Find a Boat card to provide visual separation between
         the BoatSearchForm and BoatSearchResults components.-->
     <lightning:card title="Matching Boats">
-        <c:BoatSearchResults/>
+        <c:BoatSearchResults aura:id="boatSearchResults"/>
     </lightning:card>
 </aura:component>	

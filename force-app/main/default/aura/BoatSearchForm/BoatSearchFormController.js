@@ -21,5 +21,13 @@
 
         createNewBoat.fire();
 
+    },
+
+    onFormSubmit : function(component, event, helper) {
+        var formsubmit = component.getEvent("formsubmit");
+        formsubmit.setParams({
+            "formData": {"boatTypeId":component.get("c.boatTypeId")}
+        });
+        formsubmit.fire();
     }
 })

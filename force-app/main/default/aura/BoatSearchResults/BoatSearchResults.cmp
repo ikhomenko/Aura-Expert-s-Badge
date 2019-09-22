@@ -2,6 +2,10 @@
     <aura:attribute name="boats" type="List"/>
     <aura:attribute name="boatTypeId" type="String"/>
 
+    <aura:method name="search" access="public" action="{!c.doSearch}">
+        <aura:attribute name="boatTypeId" type="String"/>
+    </aura:method>
+
     <aura:if isTrue="{!v.boats.lengh == 0}">
         <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="12" largeDeviceSize="12" padding="around-small" class="slds-align_absolute-center">
             <lightning:formattedText value="No boats found" />
