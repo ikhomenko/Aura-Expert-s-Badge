@@ -29,5 +29,9 @@
             "formData": {"boatTypeId":component.get("c.boatTypeId")}
         });
         formsubmit.fire();
+    },
+
+    onBoatSelection : function(component, event, helper) {
+        
     }
 })

@@ -1,6 +1,9 @@
 <aura:component controller="BoatSearchResults">
     <aura:attribute name="boats" type="List"/>
     <aura:attribute name="boatTypeId" type="String"/>
+    <aura:attribute name="selectedBoatId" type="String"/>
+
+    <aura:handler name="boatSelect" event="c:BoatSelect" action="{!c.onBoatSelect}"/>
 
     <aura:method name="search" access="public" action="{!c.doSearch}">
         <aura:attribute name="boatTypeId" type="String"/>
@@ -15,7 +18,7 @@
     <lightning:layout multipleRows="true">
         <aura:iteration items="{!v.boats}" var="boat">
             <lightning:layoutItem>
-                <c:BoatTile boat="{!boat}"/>
+                <c:BoatTile boat="{!boat}" selected="{!boat.Id == v.selectedBoatId ? true : false}"/>
             </lightning:layoutItem>
         </aura:iteration>
     </lightning:layout>
