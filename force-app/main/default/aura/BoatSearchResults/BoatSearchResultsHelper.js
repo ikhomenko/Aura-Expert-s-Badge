@@ -5,8 +5,8 @@
             component.set("v.boatTypeId", eventParams.boatTypeId);
         }
         var getBoats = component.get("c.getBoats");
-        action.setParams({
-            boatTypeId : component.get("v.boatTypeId")
+        getBoats.setParams({
+            "boatTypeId" : component.get("v.boatTypeId")
         });
         getBoats.setCallback(this, function(response){
             if (response.getState() === 'SUCCESS') {
