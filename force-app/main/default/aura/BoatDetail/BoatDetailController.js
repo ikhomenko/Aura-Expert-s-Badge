@@ -7,9 +7,8 @@
         }
         
     },
-    
+
     onFullDetails : function(component, event, helper) {
-        console.log(component.get("v.boat.Id"));
         var navEvt = $A.get("e.force:navigateToSObject");
         navEvt.setParams({
             "recordId": component.get("v.boat.Id"),

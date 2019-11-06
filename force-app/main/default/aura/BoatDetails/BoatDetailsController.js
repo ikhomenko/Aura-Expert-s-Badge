@@ -9,5 +9,9 @@
 
     onRecordUpdated : function(component, event, helper) {
         
+    },
+
+    onBoatReviewAdded : function(component, event, helper) {
+        component.find("details").set("v.selectedTabId", "boatreviewtab");
     }
 })

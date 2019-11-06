@@ -3,6 +3,7 @@
     <aura:attribute name="id" type="Id" />
 
     <aura:handler event="c:BoatSelected" action="{!c.onBoatSelected}"/>
+    <aura:handler name="BoatReviewAdded" event="c:BoatReviewAdded" action="{!c.onBoatReviewAdded}"/>
 
     <force:recordData aura:id="service"
         recordId="{!v.id}"
@@ -12,7 +13,7 @@
     />
 
     <aura:if isTrue="{!not(empty(v.boat))}">
-        <lightning:tabset>
+        <lightning:tabset aura:id="details">
             <lightning:tab label="Details">
                 <c:BoatDetail boat="{!v.boat}"/>
             </lightning:tab>
@@ -20,7 +21,7 @@
                 
             </lightning:tab>
             <lightning:tab label="Add Review">
-                
+                <c:AddBoatReview boat="{!v.boat}"/>
             </lightning:tab>
         </lightning:tabset>
     </aura:if>
