@@ -13,5 +13,6 @@
 
     onBoatReviewAdded : function(component, event, helper) {
         component.find("details").set("v.selectedTabId", "boatreviewtab");
+        component.find("boatReviews").refresh();
     }
 })
