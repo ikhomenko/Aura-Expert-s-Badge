@@ -24,7 +24,7 @@
                     <lightning:inputRichText value="{!v.boatReview.Comment__c}" label="Description" title="description" disabledCategories="FORMAT_FONT"/>
                 </div>
                 <div class="slds-col">
-                   
+                   <c:FiveStarRating value="{!v.boatReview.Rating__c}" readonly="false"/>
                 </div>
             </div>
 

@@ -36,7 +36,7 @@
                             <p>{!boatReview.Name}</p>
                             <p><lightning:formattedRichText value="{!boatReview.Comment__c}" /></p>
                         </div>
-                        
+                        <c:FiveStarRating value="{!v.boatReview.Rating__c}" readonly="false"/>
                     </article>
                 </li>
             </aura:iteration>
